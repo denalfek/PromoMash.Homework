@@ -1,0 +1,6 @@
+@PromoMash.Homework.Web.Server_HostAddress = http://localhost:5246
+
+GET {{PromoMash.Homework.Web.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "promomash.homework.web.client", "PromoMash.Homework.Web\promomash.homework.web.client\promomash.homework.web.client.esproj", "{1F2FF83A-83DE-46D3-DA08-197256B3899D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PromoMash.Homework.Web.Server", "PromoMash.Homework.Web\PromoMash.Homework.Web.Server\PromoMash.Homework.Web.Server.csproj", "{9B1A5156-4CB0-4000-9DA1-918B1F4B3CAA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F2FF83A-83DE-46D3-DA08-197256B3899D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F2FF83A-83DE-46D3-DA08-197256B3899D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F2FF83A-83DE-46D3-DA08-197256B3899D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{1F2FF83A-83DE-46D3-DA08-197256B3899D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F2FF83A-83DE-46D3-DA08-197256B3899D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F2FF83A-83DE-46D3-DA08-197256B3899D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{9B1A5156-4CB0-4000-9DA1-918B1F4B3CAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B1A5156-4CB0-4000-9DA1-918B1F4B3CAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B1A5156-4CB0-4000-9DA1-918B1F4B3CAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B1A5156-4CB0-4000-9DA1-918B1F4B3CAA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1DECFE95-BD26-46A0-BEC1-DF1B765A7E54}
+	EndGlobalSection
+EndGlobal
