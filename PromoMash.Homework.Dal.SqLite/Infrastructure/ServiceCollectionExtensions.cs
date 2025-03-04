@@ -2,11 +2,11 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace ClassLibrary1PromoMash.Homework.Dal.SqLite.Infrastructure;
+namespace PromoMash.Homework.Dal.SqLite.Infrastructure;
 
 public static class ServiceCollectionExtensions
 {
-    public static void AddDbContext(
+    public static void AddPromoMashDbContext(
         this IServiceCollection services,
         IConfiguration configuration)
     {

@@ -1,4 +1,4 @@
-﻿namespace ClassLibrary1PromoMash.Homework.Dal.SqLite.Entities;
+﻿namespace PromoMash.Homework.Dal.SqLite.Entities;
 
 internal sealed class User
 {

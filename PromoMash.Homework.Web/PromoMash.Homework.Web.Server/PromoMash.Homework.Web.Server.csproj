@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\PromoMash.Homework.Dal.SqLite\PromoMash.Homework.Dal.SqLite.csproj" />
     <ProjectReference Include="..\promomash.homework.web.client\promomash.homework.web.client.esproj">
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>

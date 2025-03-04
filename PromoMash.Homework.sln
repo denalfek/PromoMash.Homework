@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35825.156
@@ -7,7 +7,7 @@ Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "promomash.homework.web.clie
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PromoMash.Homework.Web.Server", "PromoMash.Homework.Web\PromoMash.Homework.Web.Server\PromoMash.Homework.Web.Server.csproj", "{9B1A5156-4CB0-4000-9DA1-918B1F4B3CAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1PromoMash.Homework.Dal.SqLite", "ClassLibrary1PromoMash.Homework.Dal.SqLite\ClassLibrary1PromoMash.Homework.Dal.SqLite.csproj", "{94A5789C-5D70-4E36-8762-51FDD1900C0B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PromoMash.Homework.Dal.SqLite", "PromoMash.Homework.Dal.SqLite\PromoMash.Homework.Dal.SqLite.csproj", "{94A5789C-5D70-4E36-8762-51FDD1900C0B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
