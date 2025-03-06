@@ -1,3 +1,7 @@
 .vs*
 obj*
 bin*
+
+PromoMash.Homework.Dal.SqLite/app.db-shm
+
+PromoMash.Homework.Dal.SqLite/app.db-wal
