@@ -1,0 +1,65 @@
+<!-- auth-wizard.component.html -->
+<div class="auth-wizard-container">
+  <h2>Authorization Wizard</h2>
+
+  <form [formGroup]="authForm">
+    <!-- Step 1: Email Login -->
+    <div *ngIf="currentStep === 1" class="wizard-step">
+      <h3>Step 1: Email</h3>
+
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email"
+               id="email"
+               formControlName="email"
+               placeholder="Enter your email">
+        <div *ngIf="authForm.get('email')?.invalid && authForm.get('email')?.touched" class="error-message">
+          <span *ngIf="authForm.get('email')?.errors?.['required']">Email is required</span>
+          <span *ngIf="authForm.get('email')?.errors?.['email']">Please enter a valid email</span>
+        </div>
+      </div>
+
+      <div class="button-group">
+        <button type="button" (click)="nextStep()" [disabled]="authForm.get('email')?.invalid">Next</button>
+      </div>
+    </div>
+
+    <!-- Step 2: Password -->
+    <div *ngIf="currentStep === 2" class="wizard-step">
+      <h3>Step 2: Create Password</h3>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password"
+               id="password"
+               formControlName="password"
+               placeholder="Create a password">
+        <div *ngIf="authForm.get('password')?.invalid && authForm.get('password')?.touched" class="error-message">
+          <span *ngIf="authForm.get('password')?.errors?.['required']">Password is required</span>
+          <span *ngIf="authForm.get('password')?.errors?.['minlength']">Password must be at least 8 characters</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password"
+               id="confirmPassword"
+               formControlName="confirmPassword"
+               placeholder="Repeat your password">
+        <div *ngIf="authForm.get('confirmPassword')?.invalid && authForm.get('confirmPassword')?.touched" class="error-message">
+          <span *ngIf="authForm.get('confirmPassword')?.errors?.['required']">Please confirm your password</span>
+          <span *ngIf="authForm.get('confirmPassword')?.errors?.['mismatch']">Passwords do not match</span>
+        </div>
+      </div>
+
+      <div class="button-group">
+        <button type="button" (click)="prevStep()">Back</button>
+        <button type="button"
+                (click)="nextStep()"
+                [disabled]="authForm.get('password')?.invalid || authForm.get('confirmPassword')?.invalid">
+          Submit
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

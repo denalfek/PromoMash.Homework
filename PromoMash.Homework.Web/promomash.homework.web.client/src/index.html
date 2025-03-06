@@ -8,6 +8,20 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-  <app-root></app-root>
+  <div>
+    <app-root></app-root>    
+  </div>
+  <div>
+    <app-auth-wizard></app-auth-wizard>
+  </div>
+  <div>
+    <ul>
+      <li>
+        <a routerLink="auth" routerLinkActive="active" ariaCurrentWhenActive="page">
+          Auth Wizard
+        </a>
+      </li>
+    </ul>
+  </div>
 </body>
 </html>
