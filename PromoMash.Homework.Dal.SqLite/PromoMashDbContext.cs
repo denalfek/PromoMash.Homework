@@ -7,7 +7,10 @@ internal sealed class PromoMashDbContext(DbContextOptions<PromoMashDbContext> op
 {
     public DbSet<User> Users { get; set; }
 
-    private const string ConnectionString = "Data Source=app.db";
+    private string ConnectionString =
+        "Data Source=C:\\Users\\sokol\\source\\repos\\PromoMash.Homework\\PromoMash.Homework.Dal.SqLite\\bin\\Debug\\net8.0\\app.db";
+        //"Data Source=PromoMash.Homework.Dal.SqLite\\bin\\Debug\\net8.0\\app.db";
+        //"Data Source=app.db";
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

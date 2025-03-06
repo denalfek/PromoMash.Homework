@@ -3,7 +3,7 @@ using PromoMash.Homework.Dal.SqLite.Infrastructure;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddPromoMashDbContext(builder.Configuration);
+builder.Services.AddPromoMashDbContext();
 builder.Services.AddRepositories();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI
