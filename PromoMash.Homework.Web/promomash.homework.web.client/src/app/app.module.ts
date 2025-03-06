@@ -4,10 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AuthWizardFirstStepComponent } from './auth-wizard-first-step/auth-wizard-first-step.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AuthWizardFirstStepComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,
