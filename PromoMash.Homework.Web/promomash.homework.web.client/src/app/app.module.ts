@@ -5,11 +5,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthWizardFirstStepComponent } from './auth-wizard-first-step/auth-wizard-first-step.component';
+import { WeatherForecastComponent } from './weather-forecast/weather-forecast.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AuthWizardFirstStepComponent
+    AuthWizardFirstStepComponent,
+    WeatherForecastComponent
   ],
   imports: [
     BrowserModule,
