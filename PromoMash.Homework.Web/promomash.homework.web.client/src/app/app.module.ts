@@ -12,7 +12,8 @@ import { AuthWizardFirstStepComponent } from './auth-wizard-first-step/auth-wiza
     AuthWizardFirstStepComponent
   ],
   imports: [
-    BrowserModule, HttpClientModule,
+    BrowserModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],
