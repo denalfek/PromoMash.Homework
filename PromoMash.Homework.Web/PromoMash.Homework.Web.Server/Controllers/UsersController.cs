@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using PromoMash.Homework.Dal.SqLite.Models;
-using PromoMash.Homework.Dal.SqLite.Repositories;
+using PromoMash.Homework.Web.Server.Controllers.Models;
+using PromoMash.Homework.Web.Server.Dal.SqLite.Repositories.Interfaces;
 using System.ComponentModel.DataAnnotations;
 
 namespace PromoMash.Homework.Web.Server.Controllers;
@@ -19,7 +19,7 @@ public class UsersController(IUserRepository userRepository) : ControllerBase
     }
 
     [HttpPost]
-    public async Task<IActionResult> Create([FromBody][Required] UserModel model)
+    public async Task<IActionResult> Create([FromBody][Required] RegistrationForm model)
     {
         await userRepository.Create(model);
         return Ok();
