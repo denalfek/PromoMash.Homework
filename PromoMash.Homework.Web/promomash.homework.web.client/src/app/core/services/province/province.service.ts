@@ -11,6 +11,6 @@ export class ProvinceService {
   constructor(private http: HttpClient) { }
 
   get(countryId: string): Observable<any[]> {
-    return this.http.get<any[]>(`${this.apiUrl}/provinces/${countryId}`);
+    return this.http.get<any[]>(`${this.apiUrl}/provinces?countryId=${countryId}`);
   }
 }

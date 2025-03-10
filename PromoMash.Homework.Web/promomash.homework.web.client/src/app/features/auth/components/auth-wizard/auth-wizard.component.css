@@ -93,3 +93,9 @@ label {
   background-color: #6c757d;
   color: white;
 }
+
+.btn-primary:disabled {
+  background-color: #77b6ff;
+  cursor: not-allowed;
+  opacity: 0.7;
+}

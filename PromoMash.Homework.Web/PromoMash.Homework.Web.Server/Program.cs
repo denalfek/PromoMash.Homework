@@ -19,6 +19,14 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddCors(opts =>
+{
+    opts.AddPolicy("CorsPolicy",
+        policy => policy
+            .WithOrigins("https://localhost:51211")
+            .AllowAnyMethod()
+            .AllowAnyHeader());
+});
 var app = builder.Build();
 
 app.UseDefaultFiles();
@@ -32,12 +40,12 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.UseCors("CorsPolicy");
 app.UseAuthorization();
 
 using (var scope = app.Services.CreateScope())
 {
-    var context = scope.ServiceProvider.GetRequiredService<PromoMashDbContext>();
+    var context = scope.ServiceProvider.GetRequiredService<PromoMashDbContext>();    
     DbSeeder.Run(context);
 }
 
