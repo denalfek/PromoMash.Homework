@@ -10,6 +10,6 @@ export class RegistrationService {
   constructor(private http: HttpClient) { }
 
   register(userData: any): Observable<any> {
-    return this.http.post<any>(`${environment.promoMashWebApiUrl}/register`, userData);
+    return this.http.post<any>(`${environment.promoMashWebApiUrl}/registration`, userData);
   }
 }
