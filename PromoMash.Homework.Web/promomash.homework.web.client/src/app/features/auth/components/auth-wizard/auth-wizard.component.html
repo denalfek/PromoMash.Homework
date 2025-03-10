@@ -1,5 +1,3 @@
-<p>auth-wizard works!</p>
-
 <!-- auth-wizard.component.html -->
 <div class="auth-wizard-container">
   <div class="wizard-header">
@@ -19,7 +17,7 @@
       <app-location-form (formCreated)="onLocationFormCreated($event)"></app-location-form>
       <div class="button-group">
         <button type="button" class="btn btn-secondary" (click)="previousStep()">Back</button>
-        <button type="button" class="btn btn-primary" (click)="save()" [disabled]="isSubmitting">
+        <button type="button" class="btn btn-primary" (click)="save()" [disabled]="isSubmitting || locationForm.invalid">
           <span *ngIf="isSubmitting">Saving...</span>
           <span *ngIf="!isSubmitting">Save</span>
         </button>
