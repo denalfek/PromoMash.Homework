@@ -1,0 +1,29 @@
+<p>auth-wizard works!</p>
+
+<!-- auth-wizard.component.html -->
+<div class="auth-wizard-container">
+  <div class="wizard-header">
+    <div class="step" [ngClass]="{'active': currentStep === 1}">Step 1: Account</div>
+    <div class="step" [ngClass]="{'active': currentStep === 2}">Step 2: Location</div>
+  </div>
+
+  <div class="wizard-content">
+    <!-- Step 1: Login Form -->
+    <div *ngIf="currentStep === 1" class="step-content">
+      <app-login-form (formCreated)="onLoginFormCreated($event)"></app-login-form>
+      <button type="button" class="btn btn-primary" (click)="nextStep()">Next</button>
+    </div>
+
+    <!-- Step 2: Location Form -->
+    <div *ngIf="currentStep === 2" class="step-content">
+      <app-location-form (formCreated)="onLocationFormCreated($event)"></app-location-form>
+      <div class="button-group">
+        <button type="button" class="btn btn-secondary" (click)="previousStep()">Back</button>
+        <button type="button" class="btn btn-primary" (click)="save()" [disabled]="isSubmitting">
+          <span *ngIf="isSubmitting">Saving...</span>
+          <span *ngIf="!isSubmitting">Save</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

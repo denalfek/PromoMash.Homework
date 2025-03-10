@@ -1,10 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { WeatherForecastComponent } from './weather-forecast/weather-forecast.component';
+import { WeatherForecastComponent } from './features/weather-forecast/components/weather-forecast.component';
 
 const routes: Routes = [
+  {
+    path: 'app-auth-wizard',
+    loadChildren: () => import('./features/auth/auth.module').then(m => m.AuthModule)
+  },
   { path: 'weather-forecast', component: WeatherForecastComponent },
-  { path: '', redirectTo: '/', pathMatch: 'full' }
+  { path: '', redirectTo: 'app-auth-wizard', pathMatch: 'full' }
 ];
 
 @NgModule({
