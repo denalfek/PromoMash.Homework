@@ -5,4 +5,6 @@ namespace PromoMash.Homework.Web.Server.Dal.SqLite.Repositories.Interfaces;
 public interface ICountryRepository
 {
     Task<IReadOnlyCollection<CountryModel>> Get(CancellationToken ct = default);
+
+    Task<bool> Exists(int id, CancellationToken ct = default);
 }

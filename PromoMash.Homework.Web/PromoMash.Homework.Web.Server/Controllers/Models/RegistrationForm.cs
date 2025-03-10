@@ -6,6 +6,6 @@ public class RegistrationForm
 
     public required string Password { get; set; }
 
-    public int CountryId { get; set; }
-    public Guid ProvinceId { get; set; }
+    public int Country { get; set; }
+    public Guid Province { get; set; }
 }

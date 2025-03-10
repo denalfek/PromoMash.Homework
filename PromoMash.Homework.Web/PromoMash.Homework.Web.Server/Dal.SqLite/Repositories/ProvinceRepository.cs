@@ -6,6 +6,15 @@ namespace PromoMash.Homework.Web.Server.Dal.SqLite.Repositories;
 
 internal class ProvinceRepository(PromoMashDbContext dbContext) : IProvinceRepository
 {
+    public async Task<bool> Exists(Guid id, CancellationToken ct = default)
+    {
+        var result = await dbContext
+            .Provinces
+            .AnyAsync(x => x.Id == id, ct);
+
+        return result;
+    }
+
     public async Task<IReadOnlyCollection<ProvinceModel>> Get(int countryId, CancellationToken ct = default)
     {
         var provinces = await dbContext
