@@ -5,7 +5,7 @@ using PromoMash.Homework.Web.Server.Services.Interfaces;
 
 namespace PromoMash.Homework.Web.Server.Services;
 
-internal sealed class RegistrationService(
+public sealed class RegistrationService(
     IPasswordHasher<UserDomain> passwordHasher,
     IUserRepository userRepository,
     ICountryRepository countryRepository,

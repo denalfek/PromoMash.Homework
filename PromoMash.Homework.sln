@@ -6,6 +6,8 @@ Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "promomash.homework.web.clie
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PromoMash.Homework.Web.Server", "PromoMash.Homework.Web\PromoMash.Homework.Web.Server\PromoMash.Homework.Web.Server.csproj", "{9B1A5156-4CB0-4000-9DA1-918B1F4B3CAA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PromoMash.HomeWork.UnitTests", "PromoMash.HomeWork.UnitTests\PromoMash.HomeWork.UnitTests.csproj", "{B3E3A6F4-FBC7-4EEF-A2E1-2095DAC3615B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,6 +24,10 @@ Global
 		{9B1A5156-4CB0-4000-9DA1-918B1F4B3CAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B1A5156-4CB0-4000-9DA1-918B1F4B3CAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B1A5156-4CB0-4000-9DA1-918B1F4B3CAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3E3A6F4-FBC7-4EEF-A2E1-2095DAC3615B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3E3A6F4-FBC7-4EEF-A2E1-2095DAC3615B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3E3A6F4-FBC7-4EEF-A2E1-2095DAC3615B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3E3A6F4-FBC7-4EEF-A2E1-2095DAC3615B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
