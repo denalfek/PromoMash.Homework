@@ -5,3 +5,9 @@ bin*
 PromoMash.Homework.Dal.SqLite/app.db-shm
 
 PromoMash.Homework.Dal.SqLite/app.db-wal
+
+PromoMash.Homework.Web/PromoMash.Homework.Web.Server/PromoMashHomeWork.db
+
+PromoMash.Homework.Web/PromoMash.Homework.Web.Server/PromoMashHomeWork.db-shm
+
+PromoMash.Homework.Web/PromoMash.Homework.Web.Server/PromoMashHomeWork.db-wal

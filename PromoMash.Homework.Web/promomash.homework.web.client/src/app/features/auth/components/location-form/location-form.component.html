@@ -1,0 +1,23 @@
+<form [formGroup]="locationForm">
+  <div class="form-group">
+    <label for="country">Country</label>
+    <select id="country" formControlName="country" class="form-control" (change)="onCountryChange()">
+      <option value="" disabled>Select a country</option>
+      <option *ngFor="let country of countries" [value]="country.id">{{ country.name }}</option>
+    </select>
+    <div *ngIf="locationForm.get('country')?.touched && locationForm.get('country')?.errors" class="error-message">
+      <span *ngIf="locationForm.get('country')?.hasError('required')">Country is required</span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="province">Province</label>
+    <select id="province" formControlName="province" class="form-control" [disabled]="!provinces.length">
+      <option value="" disabled>Select a province</option>
+      <option *ngFor="let province of provinces" [value]="province.id">{{ province.name }}</option>
+    </select>
+    <div *ngIf="locationForm.get('province')?.touched && locationForm.get('province')?.errors" class="error-message">
+      <span *ngIf="locationForm.get('province')?.hasError('required')">Province is required</span>
+    </div>
+  </div>
+</form>

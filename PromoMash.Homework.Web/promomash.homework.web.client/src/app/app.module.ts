@@ -5,18 +5,20 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AuthWizardComponent } from '../auth-wizard/auth-wizard.component';
+import { WeatherForecastComponent } from './features/weather-forecast/components/weather-forecast.component';
+import { AuthWizardComponent } from './features/auth/components/auth-wizard/auth-wizard.component';
+import { AuthModule } from './features/auth/auth.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AuthWizardComponent,
+    WeatherForecastComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]

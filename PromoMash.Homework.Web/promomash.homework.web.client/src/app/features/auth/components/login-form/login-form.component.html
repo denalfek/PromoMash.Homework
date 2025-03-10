@@ -1,0 +1,36 @@
+<form [formGroup]="loginForm">
+  <div class="form-group">
+    <label for="email">Email Address</label>
+    <input type="email" id="email" formControlName="email" class="form-control">
+    <div *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.errors" class="error-message">
+      <span *ngIf="loginForm.get('email')?.hasError('required')">Email is required</span>
+      <span *ngIf="loginForm.get('email')?.hasError('email')">Please enter a valid email address</span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" id="password" formControlName="password" class="form-control">
+    <div *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.errors" class="error-message">
+      <span *ngIf="loginForm.get('password')?.hasError('required')">Password is required</span>
+      <span *ngIf="loginForm.get('password')?.hasError('pattern')">Password must contain at least 1 letter and 1 digit</span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="confirmPassword">Confirm Password</label>
+    <input type="password" id="confirmPassword" formControlName="confirmPassword" class="form-control">
+    <div *ngIf="loginForm.get('confirmPassword')?.touched" class="error-message">
+      <span *ngIf="loginForm.get('confirmPassword')?.hasError('required')">Confirm password is required</span>
+      <span *ngIf="loginForm.hasError('passwordMismatch')">Passwords do not match</span>
+    </div>
+  </div>
+
+  <div class="form-group checkbox">
+    <input type="checkbox" id="agreeTerms" formControlName="agreeTerms">
+    <label for="agreeTerms">I agree to the terms and conditions</label>
+    <div *ngIf="loginForm.get('agreeTerms')?.touched && loginForm.get('agreeTerms')?.errors" class="error-message">
+      <span *ngIf="loginForm.get('agreeTerms')?.hasError('required')">You must agree to the terms</span>
+    </div>
+  </div>
+</form>
